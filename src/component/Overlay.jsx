@@ -104,7 +104,7 @@ const publications = [
 
 export default function Overlay({ onProjectClick }) {
   const Section = ({ children, className }) => (
-    <section className={`h-screen w-screen flex flex-col justify-center px-[10vw] ${className}`}>
+    <section className={`h-screen w-screen flex flex-col justify-center px-6 md:px-[10vw] ${className}`}>
       {children}
     </section>
   );
@@ -121,21 +121,21 @@ export default function Overlay({ onProjectClick }) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
             >
-              <h1 className="text-7xl md:text-9xl font-black tracking-tighter mb-4 text-white">
+              <h1 className="text-5xl sm:text-7xl md:text-9xl font-black tracking-tighter mb-2 md:mb-4 text-white">
                 RONIT <br /><span className="text-gray-500">MITTAL</span>
               </h1>
-              <p className="text-xl md:text-3xl text-gray-400 font-light max-w-2xl tracking-wide mx-auto">
+              <p className="text-lg sm:text-xl md:text-3xl text-gray-400 font-light max-w-2xl tracking-wide mx-auto">
                 Machine Learning Engineer & Computer Vision Researcher. <br />
-                <span className="text-white font-medium">Building the architecture of tomorrow.</span>
+                <span className="text-white font-medium mt-2 block md:inline md:mt-0">Building the architecture of tomorrow.</span>
               </p>
             </motion.div>
           </Section>
 
           {/* About / Abstract */}
           <Section className="items-center text-center">
-            <div className="max-w-2xl mx-auto">
-              <h2 className="text-sm tracking-[0.3em] text-red-500 mb-6 uppercase font-bold">Research Focus</h2>
-              <p className="text-2xl md:text-4xl leading-snug font-light text-gray-300">
+            <div className="max-w-2xl mx-auto px-4 md:px-0">
+              <h2 className="text-xs md:text-sm tracking-[0.3em] text-red-500 mb-6 uppercase font-bold">Research Focus</h2>
+              <p className="text-xl sm:text-2xl md:text-4xl leading-relaxed md:leading-snug font-light text-gray-300">
                 Deploying deep learning models for <span className="text-white font-medium">medical image segmentation</span>, NLP, and scalable AI infrastructure.
               </p>
             </div>
@@ -143,10 +143,10 @@ export default function Overlay({ onProjectClick }) {
 
           {/* Experience */}
           <Section className="items-center text-center">
-            <div className="max-w-4xl pointer-events-auto mx-auto text-left w-full">
-              <h2 className="text-sm tracking-[0.3em] text-red-500 mb-8 uppercase font-bold text-center">Experience</h2>
-              <div className="flex flex-col gap-6">
-                <div className="border border-white/10 bg-black/40 backdrop-blur-md p-8 hover:border-white/30 transition-all duration-300 hover:-translate-y-1">
+            <div className="max-w-4xl pointer-events-auto mx-auto text-left w-full h-[70vh] md:h-auto flex flex-col justify-center">
+              <h2 className="text-xs md:text-sm tracking-[0.3em] text-red-500 mb-6 md:mb-8 uppercase font-bold text-center">Experience</h2>
+              <div className="flex overflow-x-auto md:flex-col gap-4 md:gap-6 pb-4 md:pb-0 snap-x snap-mandatory hide-scrollbar">
+                <div className="border border-white/10 bg-black/40 backdrop-blur-md p-6 md:p-8 hover:border-white/30 transition-all duration-300 hover:-translate-y-1 min-w-[85vw] md:min-w-0 snap-center shrink-0">
                   <div className="flex flex-col md:flex-row justify-between md:items-center mb-2">
                     <h3 className="text-xl font-bold text-white">Research Intern</h3>
                     <span className="text-xs tracking-widest text-red-400 uppercase mt-2 md:mt-0">Apr 2026 - Oct 2026</span>
@@ -187,47 +187,51 @@ export default function Overlay({ onProjectClick }) {
 
           {/* Projects */}
           <Section className="items-center text-center">
-            <h2 className="text-sm tracking-[0.3em] text-red-500 mb-10 uppercase font-bold">Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl pointer-events-auto mx-auto text-left">
-              {projects.map((project, i) => (
-                <div
-                  key={i}
-                  onClick={() => onProjectClick(project)}
-                  className="group relative border border-white/10 bg-black/40 backdrop-blur-md p-8 cursor-pointer transition-all duration-500 hover:bg-white/5 hover:-translate-y-2 hover:border-white/30"
-                >
-                  <div className="absolute top-0 left-0 w-full h-1 bg-red-500 transform origin-left scale-x-0 transition-transform duration-500 group-hover:scale-x-100" />
-                  <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-gray-400 text-sm mb-6">{project.role}</p>
-                  <div className="flex items-center text-xs tracking-wider text-gray-500 uppercase group-hover:text-white transition-colors duration-300">
-                    Initialize Sequence <ArrowRight className="ml-2 w-4 h-4" />
+            <div className="w-full max-w-6xl pointer-events-auto mx-auto text-left h-[75vh] md:h-auto flex flex-col justify-center">
+              <h2 className="text-xs md:text-sm tracking-[0.3em] text-red-500 mb-6 md:mb-10 uppercase font-bold text-center">Projects</h2>
+              <div className="flex overflow-x-auto md:grid md:grid-cols-3 gap-4 md:gap-8 pb-8 md:pb-0 snap-x snap-mandatory hide-scrollbar items-stretch">
+                {projects.map((project, i) => (
+                  <div
+                    key={i}
+                    onClick={() => onProjectClick(project)}
+                    className="group relative border border-white/10 bg-black/40 backdrop-blur-md p-6 md:p-8 cursor-pointer transition-all duration-500 hover:bg-white/5 hover:-translate-y-2 hover:border-white/30 min-w-[80vw] sm:min-w-[60vw] md:min-w-0 snap-center shrink-0 flex flex-col"
+                  >
+                    <div className="absolute top-0 left-0 w-full h-1 bg-red-500 transform origin-left scale-x-0 transition-transform duration-500 group-hover:scale-x-100" />
+                    <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-white line-clamp-2">{project.title}</h3>
+                    <p className="text-sm md:text-base text-gray-400 font-light leading-relaxed line-clamp-4">{project.description}</p>
+                    <div className="flex items-center gap-2 mt-4 md:mt-6 text-red-400 font-medium text-xs md:text-sm uppercase tracking-widest group-hover:gap-4 transition-all mt-auto">
+                      Initialize Sequence <ArrowRight className="ml-2 w-4 h-4" />
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </Section>
 
           {/* Publications */}
-          <Section className="items-center text-center pb-32">
-            <h2 className="text-sm tracking-[0.3em] text-red-500 mb-10 uppercase font-bold">Publications & Literature</h2>
-            <div className="flex flex-col gap-6 w-full max-w-3xl pointer-events-auto mx-auto">
-              {publications.map((pub, i) => (
-                <a
-                  key={i}
-                  href={pub.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group flex flex-col md:flex-row justify-between items-center md:items-center border border-white/10 bg-black/40 backdrop-blur-md p-6 hover:border-white/50 transition-colors duration-300"
-                >
-                  <div className="text-center md:text-left mb-4 md:mb-0">
-                    <h3 className="text-xl font-bold group-hover:text-red-400 transition-colors duration-300">{pub.title}</h3>
-                    <p className="text-gray-400 text-sm mt-1">{pub.desc}</p>
-                  </div>
-                  <div className="flex items-center gap-3 text-sm text-gray-500 group-hover:text-white transition-colors duration-300">
-                    <span className="uppercase tracking-widest">{pub.venue}</span>
-                    <ExternalLink className="w-4 h-4" />
-                  </div>
-                </a>
-              ))}
+          <Section className="items-center text-center pb-20 md:pb-32">
+            <div className="w-full max-w-4xl pointer-events-auto mx-auto text-left flex flex-col justify-center">
+              <h2 className="text-xs md:text-sm tracking-[0.3em] text-red-500 mb-6 md:mb-10 uppercase font-bold text-center">Publications & Literature</h2>
+              <div className="flex flex-col gap-4">
+                {publications.map((pub, i) => (
+                  <a
+                    key={i}
+                    href={pub.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group flex flex-col md:flex-row justify-between items-start md:items-center border border-white/10 bg-black/40 backdrop-blur-md p-5 md:p-6 hover:border-white/50 transition-colors duration-300"
+                  >
+                    <div className="text-left mb-3 md:mb-0 max-w-[85%]">
+                      <h3 className="text-base md:text-xl font-bold group-hover:text-red-400 transition-colors duration-300">{pub.title}</h3>
+                      <p className="text-gray-400 text-xs md:text-sm mt-1 md:mt-2">{pub.desc}</p>
+                    </div>
+                    <div className="flex items-center gap-2 md:gap-3 text-xs md:text-sm text-gray-500 group-hover:text-white transition-colors duration-300 mt-2 md:mt-0">
+                      <span className="uppercase tracking-widest">{pub.venue}</span>
+                      <ExternalLink className="w-4 h-4" />
+                    </div>
+                  </a>
+                ))}
+              </div>
             </div>
           </Section>
         </div>
