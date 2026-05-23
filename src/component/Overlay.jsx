@@ -143,10 +143,10 @@ export default function Overlay({ onProjectClick }) {
 
           {/* Experience */}
           <Section className="items-center text-center">
-            <div className="max-w-4xl pointer-events-auto mx-auto text-left w-full h-[70vh] md:h-auto flex flex-col justify-center">
+            <div className="max-w-4xl pointer-events-auto mx-auto text-left w-full flex flex-col justify-center pb-20 md:pb-0">
               <h2 className="text-xs md:text-sm tracking-[0.3em] text-red-500 mb-6 md:mb-8 uppercase font-bold text-center">Experience</h2>
-              <div className="flex overflow-x-auto md:flex-col gap-4 md:gap-6 pb-4 md:pb-0 snap-x snap-mandatory hide-scrollbar">
-                <div className="border border-white/10 bg-black/40 backdrop-blur-md p-6 md:p-8 hover:border-white/30 transition-all duration-300 hover:-translate-y-1 min-w-[85vw] md:min-w-0 snap-center shrink-0">
+              <div className="flex flex-col gap-6">
+                <div className="border border-white/10 bg-black/40 backdrop-blur-md p-6 md:p-8 hover:border-white/30 transition-all duration-300 hover:-translate-y-1">
                   <div className="flex flex-col md:flex-row justify-between md:items-center mb-2">
                     <h3 className="text-xl font-bold text-white">Research Intern</h3>
                     <span className="text-xs tracking-widest text-red-400 uppercase mt-2 md:mt-0">Apr 2026 - Oct 2026</span>
@@ -156,8 +156,7 @@ export default function Overlay({ onProjectClick }) {
                     Researching and developing highly optimized Edge Face Recognition models, focusing on balancing high-accuracy biometric verification with low-power and low-latency constraints for edge deployment.
                   </p>
                 </div>
-
-                <div className="border border-white/10 bg-black/40 backdrop-blur-md p-8 hover:border-white/30 transition-all duration-300 hover:-translate-y-1">
+                <div className="border border-white/10 bg-black/40 backdrop-blur-md p-6 md:p-8 hover:border-white/30 transition-all duration-300 hover:-translate-y-1">
                   <div className="flex flex-col md:flex-row justify-between md:items-center mb-2">
                     <h3 className="text-xl font-bold text-white">Undergraduate Research Intern</h3>
                     <span className="text-xs tracking-widest text-red-400 uppercase mt-2 md:mt-0">Jun 2025 - Jul 2025</span>
@@ -167,8 +166,7 @@ export default function Overlay({ onProjectClick }) {
                     Designed and implemented a residual attention U-Net architecture for stroke-lesion segmentation, focusing on identifying subtle anomalies and improving spatial robustness.
                   </p>
                 </div>
-
-                <div className="border border-white/10 bg-black/40 backdrop-blur-md p-8 hover:border-white/30 transition-all duration-300 hover:-translate-y-1">
+                <div className="border border-white/10 bg-black/40 backdrop-blur-md p-6 md:p-8 hover:border-white/30 transition-all duration-300 hover:-translate-y-1">
                   <div className="flex flex-col md:flex-row justify-between md:items-center mb-2">
                     <h3 className="text-xl font-bold text-white">Project Intern</h3>
                     <span className="text-xs tracking-widest text-red-400 uppercase mt-2 md:mt-0">Jun 2024 - Jul 2024</span>
@@ -187,14 +185,14 @@ export default function Overlay({ onProjectClick }) {
 
           {/* Projects */}
           <Section className="items-center text-center">
-            <div className="w-full max-w-6xl pointer-events-auto mx-auto text-left h-[75vh] md:h-auto flex flex-col justify-center">
+            <div className="w-full max-w-6xl pointer-events-auto mx-auto text-left flex flex-col justify-center pb-20 md:pb-0">
               <h2 className="text-xs md:text-sm tracking-[0.3em] text-red-500 mb-6 md:mb-10 uppercase font-bold text-center">Projects</h2>
-              <div className="flex overflow-x-auto md:grid md:grid-cols-3 gap-4 md:gap-8 pb-8 md:pb-0 snap-x snap-mandatory hide-scrollbar items-stretch">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-stretch">
                 {projects.map((project, i) => (
                   <div
                     key={i}
                     onClick={() => onProjectClick(project)}
-                    className="group relative border border-white/10 bg-black/40 backdrop-blur-md p-6 md:p-8 cursor-pointer transition-all duration-500 hover:bg-white/5 hover:-translate-y-2 hover:border-white/30 min-w-[80vw] sm:min-w-[60vw] md:min-w-0 snap-center shrink-0 flex flex-col"
+                    className="group relative border border-white/10 bg-black/40 backdrop-blur-md p-6 md:p-8 cursor-pointer transition-all duration-500 hover:bg-white/5 hover:-translate-y-2 hover:border-white/30 flex flex-col"
                   >
                     <div className="absolute top-0 left-0 w-full h-1 bg-red-500 transform origin-left scale-x-0 transition-transform duration-500 group-hover:scale-x-100" />
                     <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-white line-clamp-2">{project.title}</h3>
