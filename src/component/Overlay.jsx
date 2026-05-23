@@ -104,8 +104,12 @@ const publications = [
 
 export default function Overlay({ onProjectClick }) {
   const Section = ({ children, className }) => (
-    <section className={`h-screen w-screen flex flex-col justify-center px-6 md:px-[10vw] ${className}`}>
-      {children}
+    <section className={`min-h-screen w-screen flex flex-col px-6 md:px-[10vw] py-24 md:py-32 ${className}`}>
+      <div className="flex-grow min-h-[5vh]" />
+      <div className="w-full flex flex-col items-center">
+        {children}
+      </div>
+      <div className="flex-grow min-h-[5vh]" />
     </section>
   );
 
