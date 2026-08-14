@@ -5,6 +5,42 @@ import { ExternalLink, ArrowRight } from 'lucide-react';
 
 const projects = [
   {
+    id: 'omnimamba-unet',
+    title: '3D Brain Stroke Segmentation (OmniMamba-UNet)',
+    role: 'AI Researcher',
+    description: 'Engineered a novel fully volumetric encoder-decoder network replacing traditional quadratic self-attention blocks with a Tri-Planar Selective State Space (S6) layer to process dense 3D volumes at voxel resolution in linear time. Evaluated on the ISLES 2022 dataset (250 subjects); achieved a five-fold cross-validation mean Dice coefficient of 0.7461 (peak fold 0.8236).',
+    tech: ['PyTorch', 'MONAI', 'Mamba', 'Medical Imaging'],
+    github: null,
+    demo: null,
+  },
+  {
+    id: 'cod-study',
+    title: 'Controlled Decoders for Camouflaged Object Detection',
+    role: 'AI Researcher',
+    description: 'Conducted a highly controlled architectural benchmark isolating performance gains across CNN (ResNet-50), Vision Transformer, and linear-complexity Mamba decoders on the COD10K dataset (10,000 images). Developed a Swin-Tiny + Mamba hybrid architecture incorporating a specialized cross-attention fusion module, outperforming standard decoders with a structure measure Sm = 0.8401 and a Mean Absolute Error MAE = 0.0341 (a 22% error reduction).',
+    tech: ['PyTorch', 'Swin Transformer', 'Mamba', 'Computer Vision'],
+    github: null,
+    demo: null,
+  },
+  {
+    id: 'multimodal-osteoporosis',
+    title: 'Multimodal Knowledge Distillation for Osteoporosis Diagnosis',
+    role: 'Deep Learning Researcher',
+    description: 'Designed a multimodal teacher-student regression pipeline using tabular clinical indicators and channel-stacked, six-channel dual-site image tensors (hip + spine DXA scans) to model cross-site density co-variation. Achieved a continuous T-score regression performance benchmark of R2 = 0.9111, MAE = 0.3157, and an overall 3-class clinical classification accuracy of 85.04% on a 3,585-patient cohort while reducing parameters by 55%.',
+    tech: ['TensorFlow', 'PyTorch', 'ResNet', 'EfficientNet', 'Fusion'],
+    github: null,
+    demo: null,
+  },
+  {
+    id: 'hemoglobin-prediction',
+    title: 'PPG-HbNet: Non-Invasive Hemoglobin Estimation',
+    role: 'Deep Learning Researcher',
+    description: 'Developed a Wide & Deep hybrid neural network fusing raw 4-wavelength (660/730/850/940 nm) fingertip PPG signal segments with 71 handcrafted statistical and frequency-domain biomarkers via a linear bypass stream. Achieved a best-fold validation R2 score of 0.5490 on the open-source Hb-PPG dataset (252 subjects), outperforming traditional linear/Ridge metrics and establishing competitive parity with clinical pulse co-oximeters.',
+    tech: ['PyTorch', '1D CNN', 'Transformer', 'Signal Processing'],
+    github: null,
+    demo: null,
+  },
+  {
     id: 'creatorpilot',
     title: 'CreatorPilot',
     role: 'AI Developer',
@@ -48,51 +84,33 @@ const projects = [
     tech: ['Python', 'YOLOv11', 'OpenCV', 'NumPy', 'Roboflow'],
     github: null,
     demo: null,
-  },
-  {
-    id: 'hemoglobin-prediction',
-    title: 'Non-Invasive Hemoglobin Prediction',
-    role: 'Deep Learning Researcher',
-    description: 'Built a Wide & Deep Hybrid Network (1D-ResNet + Statistical Linear Bypass) to predict hemoglobin levels from 4-wavelength fingertip PPG signals. Eliminated data leakage using GroupKFold and deployed the PyTorch framework on an institutional HPC cluster, achieving an isolated validation R² of 0.5490.',
-    tech: ['Deep Learning', 'Signal Processing', 'HPC', 'PyTorch', '1D-ResNet'],
-    github: null,
-    demo: null,
-  },
-  {
-    id: 'cod-study',
-    title: 'Camouflaged Object Detection Study',
-    role: 'AI Researcher',
-    description: 'Ran a highly controlled experiment on COD10K to isolate performance drivers in camouflaged object detection. Evaluated ResNet+Transformer, ResNet+Mamba, and Swin+Mamba. Proved that upgrading the backbone (Swin+Mamba achieving Sm=0.9176) yields significantly higher gains than swapping decoders.',
-    tech: ['PyTorch', 'Swin Transformer', 'Mamba (SSM)', 'Segmentation', '8× H100 GPU'],
-    github: null,
-    demo: null,
   }
 ];
 
 const publications = [
   {
+    title: 'Hybrid Image-Based Wound Healing Analysis Using Entropy-Based Segmentation, Texture Features, and Optical Flow',
+    venue: 'IEEE CICN 2026 (Accepted)',
+    desc: 'Proceedings of the 2026 IEEE 18th International Conference on Computational Intelligence and Communication Networks (CICN).',
+    link: 'https://doi.org/10.1109/CICN70047.2026.11594142'
+  },
+  {
+    title: 'Human Presence Detection in Disaster Imagery Using Machine Learning',
+    venue: 'IEEE CICN 2026 (Accepted)',
+    desc: 'Proceedings of the 2026 IEEE 18th International Conference on Computational Intelligence and Communication Networks (CICN).',
+    link: 'https://doi.org/10.1109/CICN70047.2026.11594393'
+  },
+  {
     title: 'Linear Systems Reduction using Differentiation and Mihailov Stability Criterion',
     venue: 'ICICV 2025 (Published)',
     desc: 'Proceedings of the 6th International Conference on Intelligent Communication Technologies and Virtual Mobile Networks (ICICV).',
-    link: 'https://www.researchgate.net/publication/394480198_Linear_Systems_Reduction_using_Differentiation_and_Mihailov_Stability_Criterion'
+    link: 'https://doi.org/10.1109/ICICV64824.2025.11085762'
   },
   {
-    title: 'A Pragmatic DevOps Approach for Reducing the Time-to-Market for Business using Git and DevOps',
+    title: 'A Pragmatic DevOps Approach for Reducing the Time-to-Market for business using Git and DevOps',
     venue: 'ICICV 2025 (Published)',
     desc: 'Proceedings of the 6th International Conference on Intelligent Communication Technologies and Virtual Mobile Networks (ICICV).',
-    link: 'https://ieeexplore.ieee.org/document/11085714'
-  },
-  {
-    title: 'Hybrid Image-Based Wound Healing Analysis',
-    venue: 'IEEE CICN 2026 (Accepted)',
-    desc: 'Utilizing Entropy-Based Segmentation, Texture Features, and Optical Flow.',
-    link: '#'
-  },
-  {
-    title: 'Human Presence Detection in Disaster Imagery',
-    venue: 'IEEE CICN 2026 (Accepted)',
-    desc: 'Machine learning approach for rapid human detection in post-disaster environments.',
-    link: '#'
+    link: 'https://doi.org/10.1109/ICICV64824.2025.11085714'
   },
   {
     title: 'Vote2Detect YOLO Framework',
@@ -145,6 +163,32 @@ export default function Overlay({ onProjectClick }) {
             </div>
           </Section>
 
+          {/* Education */}
+          <Section className="items-center text-center">
+            <div className="max-w-4xl pointer-events-auto mx-auto text-left w-full flex flex-col justify-center pb-20 md:pb-0">
+              <h2 className="text-xs md:text-sm tracking-[0.3em] text-red-500 mb-6 md:mb-8 uppercase font-bold text-center">Education</h2>
+              <div className="flex flex-col gap-6">
+                <div className="border border-white/10 bg-black/40 backdrop-blur-md p-6 md:p-8 hover:border-white/30 transition-all duration-300 hover:-translate-y-1">
+                  <div className="flex flex-col md:flex-row justify-between md:items-center mb-2">
+                    <h3 className="text-xl font-bold text-white">Masters of Computer Application</h3>
+                    <span className="text-xs tracking-widest text-red-400 uppercase mt-2 md:mt-0">Aug 2025 - Expected May 2027</span>
+                  </div>
+                  <p className="text-xs text-gray-500 uppercase tracking-widest">The University of Petroleum and Energy Studies • Dehradun, India</p>
+                </div>
+                <div className="border border-white/10 bg-black/40 backdrop-blur-md p-6 md:p-8 hover:border-white/30 transition-all duration-300 hover:-translate-y-1">
+                  <div className="flex flex-col md:flex-row justify-between md:items-center mb-2">
+                    <h3 className="text-xl font-bold text-white">Bachelor of Computer Application</h3>
+                    <span className="text-xs tracking-widest text-red-400 uppercase mt-2 md:mt-0">Aug 2022 - May 2025</span>
+                  </div>
+                  <p className="text-xs text-gray-500 uppercase tracking-widest mb-4">The University of Petroleum and Energy Studies • Dehradun, India</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    CGPA: 8.28
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Section>
+
           {/* Experience */}
           <Section className="items-center text-center">
             <div className="max-w-4xl pointer-events-auto mx-auto text-left w-full flex flex-col justify-center pb-20 md:pb-0">
@@ -152,23 +196,25 @@ export default function Overlay({ onProjectClick }) {
               <div className="flex flex-col gap-6">
                 <div className="border border-white/10 bg-black/40 backdrop-blur-md p-6 md:p-8 hover:border-white/30 transition-all duration-300 hover:-translate-y-1">
                   <div className="flex flex-col md:flex-row justify-between md:items-center mb-2">
-                    <h3 className="text-xl font-bold text-white">Research Intern</h3>
-                    <span className="text-xs tracking-widest text-red-400 uppercase mt-2 md:mt-0">Apr 2026 - Oct 2026</span>
+                    <h3 className="text-xl font-bold text-white">Research Internship</h3>
+                    <span className="text-xs tracking-widest text-red-400 uppercase mt-2 md:mt-0">Apr 2026 - Expected Oct 2026</span>
                   </div>
-                  <p className="text-xs text-gray-500 uppercase tracking-widest mb-4">Dalian University of Technology</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    Researching and developing highly optimized Edge Face Recognition models, focusing on balancing high-accuracy biometric verification with low-power and low-latency constraints for edge deployment.
-                  </p>
+                  <p className="text-xs text-gray-500 uppercase tracking-widest mb-4">Dalian University of Technology • Dalian, China</p>
+                  <ul className="text-gray-400 text-sm leading-relaxed list-disc list-outside ml-4 space-y-2">
+                    <li>Optimizing EdgeFace architecture for resource-constrained edge devices, focusing on structural modifications to significantly reduce model parameters and MFLOPs.</li>
+                    <li>Introducing architectural novelty to the facial recognition framework, balancing aggressive model compression with rigorous benchmark evaluations to maintain baseline accuracy.</li>
+                  </ul>
                 </div>
                 <div className="border border-white/10 bg-black/40 backdrop-blur-md p-6 md:p-8 hover:border-white/30 transition-all duration-300 hover:-translate-y-1">
                   <div className="flex flex-col md:flex-row justify-between md:items-center mb-2">
                     <h3 className="text-xl font-bold text-white">Undergraduate Research Intern</h3>
                     <span className="text-xs tracking-widest text-red-400 uppercase mt-2 md:mt-0">Jun 2025 - Jul 2025</span>
                   </div>
-                  <p className="text-xs text-gray-500 uppercase tracking-widest mb-4">UPES School of Computer Science</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    Designed and implemented a residual attention U-Net architecture for stroke-lesion segmentation, focusing on identifying subtle anomalies and improving spatial robustness.
-                  </p>
+                  <p className="text-xs text-gray-500 uppercase tracking-widest mb-4">UPES School of Computer Science • Dehradun, India</p>
+                  <ul className="text-gray-400 text-sm leading-relaxed list-disc list-outside ml-4 space-y-2">
+                    <li>Developed and implemented a residual attention U-Net architecture, achieving a cross-validation mean Dice score of 0.7766 in the project's stroke-lesion segmentation.</li>
+                    <li>Created a hybrid Focal-Tversky + Adaptive-Wing loss and residual attention U-Net that successfully handled a 145:1 background-to-lesion imbalance.</li>
+                  </ul>
                 </div>
                 <div className="border border-white/10 bg-black/40 backdrop-blur-md p-6 md:p-8 hover:border-white/30 transition-all duration-300 hover:-translate-y-1">
                   <div className="flex flex-col md:flex-row justify-between md:items-center mb-2">
@@ -176,12 +222,10 @@ export default function Overlay({ onProjectClick }) {
                     <span className="text-xs tracking-widest text-red-400 uppercase mt-2 md:mt-0">Jun 2024 - Jul 2024</span>
                   </div>
                   <p className="text-xs text-gray-500 uppercase tracking-widest mb-4">Phemesoftware Pvt Ltd. • India</p>
-                  <p className="text-gray-400 text-sm leading-relaxed mb-2">
-                    Built and deployed predictive models for COVID-19, breast cancer, and diabetes using Scikit-learn, leveraging symptom and clinical data to assess risk levels.
-                  </p>
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    Applied classification algorithms achieving 94.24% accuracy (SVM) for Breast Cancer, 80.77% (Random Forest) for COVID-19, and 77.27% (Logistic Regression) for Diabetes.
-                  </p>
+                  <ul className="text-gray-400 text-sm leading-relaxed list-disc list-outside ml-4 space-y-2">
+                    <li>Built and deployed predictive models for COVID-19, breast cancer, and diabetes using Scikit-learn, leveraging symptom and clinical data to assess risk levels.</li>
+                    <li>Applied classification algorithms such as Logistic Regression for Diabetes Prediction achieving 77.27% accuracy, Random Forest for COVID-19 Prediction achieving 80.77% accuracy, and SVM for Breast Cancer Prediction achieving 94.24% accuracy.</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -211,7 +255,7 @@ export default function Overlay({ onProjectClick }) {
           </Section>
 
           {/* Publications */}
-          <Section className="items-center text-center pb-20 md:pb-32">
+          <Section className="items-center text-center">
             <div className="w-full max-w-4xl pointer-events-auto mx-auto text-left flex flex-col justify-center">
               <h2 className="text-xs md:text-sm tracking-[0.3em] text-red-500 mb-6 md:mb-10 uppercase font-bold text-center">Publications & Literature</h2>
               <div className="flex flex-col gap-4">
@@ -233,6 +277,23 @@ export default function Overlay({ onProjectClick }) {
                     </div>
                   </a>
                 ))}
+              </div>
+            </div>
+          </Section>
+
+          {/* Technical Skills */}
+          <Section className="items-center text-center pb-20 md:pb-32">
+            <div className="w-full max-w-4xl pointer-events-auto mx-auto text-left flex flex-col justify-center">
+              <h2 className="text-xs md:text-sm tracking-[0.3em] text-red-500 mb-6 md:mb-10 uppercase font-bold text-center">Technical Skills</h2>
+              <div className="border border-white/10 bg-black/40 backdrop-blur-md p-6 md:p-8">
+                <ul className="text-gray-300 text-sm md:text-base leading-relaxed space-y-3">
+                  <li><strong className="text-white">Languages:</strong> Python, Java, JavaScript, C, SQL</li>
+                  <li><strong className="text-white">AI & Machine Learning:</strong> PyTorch, TensorFlow, Keras, Scikit-learn, MONAI, NumPy, Pandas</li>
+                  <li><strong className="text-white">Computer Vision & Signal Processing:</strong> OpenCV, MediaPipe, YOLOv8, Image Segmentation, Signal Filtering</li>
+                  <li><strong className="text-white">Specialized Architectures:</strong> State Space Models (Mamba, S6), U-Net, UNETR, Swin Transformer, ResNet, EfficientNet</li>
+                  <li><strong className="text-white">Generative AI & LLMs:</strong> OpenAI API, Hugging Face, Vision-Language Models (VLMs), Prompt Engineering</li>
+                  <li><strong className="text-white">Tools & Frameworks:</strong> Linux/HPC (PBS Clusters, qsub), Git, Docker, Flask, React.js</li>
+                </ul>
               </div>
             </div>
           </Section>

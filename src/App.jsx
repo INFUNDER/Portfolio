@@ -12,11 +12,11 @@ function App() {
   useEffect(() => {
     const updatePages = () => {
       if (window.innerWidth < 640) {
-        setPages(8); // Mobile requires ~8 pages for vertically stacked items
+        setPages(12); // Mobile requires more pages due to stacked grids
       } else if (window.innerWidth < 1024) {
-        setPages(6.5);  // Tablet
+        setPages(9);  // Tablet
       } else {
-        setPages(5.5);  // Desktop
+        setPages(7.5);  // Desktop
       }
     };
     
