@@ -39,6 +39,7 @@ const projects = [
     tech: ['PyTorch', '1D CNN', 'Transformer', 'Signal Processing'],
     github: null,
     demo: null,
+  }
 ];
 
 const publications = [
