@@ -12,11 +12,11 @@ function App() {
   useEffect(() => {
     const updatePages = () => {
       if (window.innerWidth < 640) {
-        setPages(10); // Mobile
+        setPages(13); // Mobile
       } else if (window.innerWidth < 1024) {
-        setPages(7.5);  // Tablet
+        setPages(10);  // Tablet
       } else {
-        setPages(6);  // Desktop
+        setPages(8.5);  // Desktop
       }
     };
     
