@@ -39,52 +39,6 @@ const projects = [
     tech: ['PyTorch', '1D CNN', 'Transformer', 'Signal Processing'],
     github: null,
     demo: null,
-  },
-  {
-    id: 'creatorpilot',
-    title: 'CreatorPilot',
-    role: 'AI Developer',
-    description: 'An AI-powered web app that generates intelligent captions for both images and videos. Features real-time sentiment transformation, precise subtitle alignment, font customization, and multilingual subtitle support.',
-    tech: ['React', 'Node.js', 'AI Models'],
-    github: 'https://github.com/INFUNDER/Creator-Pilot',
-    demo: null,
-  },
-  {
-    id: 'insightai',
-    title: 'INSIGHT AI',
-    role: 'Lead Researcher',
-    description: 'A Flask-based application that analyzes behavioral traits through AI, focusing on posture and facial expressions to provide personalized feedback for improving communication skills in various scenarios.',
-    tech: ['Flask', 'Python', 'Computer Vision'],
-    github: 'https://github.com/INFUNDER/INSIGHT_AI',
-    demo: null,
-  },
-  {
-    id: 'diseasepred',
-    title: 'Disease Prediction System',
-    role: 'ML Engineer',
-    description: 'A web-based application that leverages machine learning to analyze user-reported symptoms and predict the likelihood of diseases such as Diabetes, Breast Cancer, and COVID-19.',
-    tech: ['Machine Learning', 'Python', 'Web'],
-    github: 'https://github.com/INFUNDER/Disease_Prediction',
-    demo: null,
-  },
-  {
-    id: 'kitewatch',
-    title: 'KiteWatch',
-    role: 'Embedded Systems & Aerodynamics Lead',
-    description: 'Traditional Unmanned Aerial Vehicles (UAVs) are bottlenecked by short battery life and acoustic signatures. KiteWatch bypasses these constraints using a custom-engineered kite structure to hoist an advanced electronic payload capable of streaming live video and telemetry logs without consuming any power for flight propulsion.',
-    tech: ['Embedded Systems', 'IoT', 'RF Telemetry', 'Aerodynamics', 'Edge Computing'],
-    github: null,
-    demo: null,
-  },
-  {
-    id: 'wildlife-monitor',
-    title: 'AI Wildlife Monitoring',
-    role: 'Computer Vision Engineer',
-    description: 'Developed an edge-ready, two-stage computer vision pipeline (YOLOv11 & Geometric Behavior Analysis) to detect invading primates in agricultural fields and analyze behavior in real time, achieving a Precision of 0.799 and mAP50 of 0.779 while eliminating false positives.',
-    tech: ['Python', 'YOLOv11', 'OpenCV', 'NumPy', 'Roboflow'],
-    github: null,
-    demo: null,
-  }
 ];
 
 const publications = [
@@ -147,8 +101,8 @@ export default function Overlay({ onProjectClick }) {
                 RONIT <br /><span className="text-gray-500">MITTAL</span>
               </h1>
               <p className="text-lg sm:text-xl md:text-3xl text-gray-400 font-light max-w-2xl tracking-wide mx-auto">
-                Machine Learning Engineer & Computer Vision Researcher. <br />
-                <span className="text-white font-medium mt-2 block md:inline md:mt-0">Building the architecture of tomorrow.</span>
+                Computer Vision Researcher <br />
+                <span className="text-white font-medium mt-2 block md:inline md:mt-0">Prospective PhD Student in Biomedical Imaging</span>
               </p>
             </motion.div>
           </Section>
@@ -158,7 +112,7 @@ export default function Overlay({ onProjectClick }) {
             <div className="max-w-2xl mx-auto px-4 md:px-0">
               <h2 className="text-xs md:text-sm tracking-[0.3em] text-red-500 mb-6 uppercase font-bold">Research Focus</h2>
               <p className="text-xl sm:text-2xl md:text-4xl leading-relaxed md:leading-snug font-light text-gray-300">
-                Deploying deep learning models for <span className="text-white font-medium">medical image segmentation</span>, NLP, and scalable AI infrastructure.
+                Advancing computational diagnostics through <span className="text-white font-medium">dense 3D medical volume segmentation</span>, state-space architectures, and multimodal clinical synthesis.
               </p>
             </div>
           </Section>
