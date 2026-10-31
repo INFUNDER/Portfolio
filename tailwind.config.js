@@ -4,27 +4,20 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        generalsans: ['General Sans', 'sans-serif'],
+        serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+        sans: ['Geist', 'system-ui', 'sans-serif'],
+        mono: ['"Geist Mono"', 'ui-monospace', 'monospace'],
       },
       colors: {
-        black: {
-          DEFAULT: '#000',
-          100: '#010103',
-          200: '#0E0E10',
-          300: '#1C1C21',
-          500: '#3A3A49',
-          600: '#1A1A1A',
-        },
-        white: {
-          DEFAULT: '#FFFFFF',
-          800: '#E4E4E6',
-          700: '#D6D9E9',
-          600: '#AFB0B6',
-          500: '#62646C',
-        },
+        ink: 'rgb(var(--ink) / <alpha-value>)',
+        paper: 'rgb(var(--paper) / <alpha-value>)',
+        muted: 'rgb(var(--muted) / <alpha-value>)',
+        line: 'rgb(var(--line) / <alpha-value>)',
+        eosin: 'rgb(var(--eosin) / <alpha-value>)',
+        hema: 'rgb(var(--hema) / <alpha-value>)',
       },
-      backgroundImage: {
-        terminal: "url('/assets/terminal.png')",
+      maxWidth: {
+        page: '88rem',
       },
     },
   },
